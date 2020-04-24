@@ -6,6 +6,7 @@
     <title>FORMULARIO</title>
 </head>
 <body>
+    <form>
     <h1>Operación de variables</h1>
     <p>Realizar un formulario que permita capturar dos valores, <br> 
        cuales se puedan sumar, restar, multiplicar o dividir y morstrar el resultado</p>
@@ -25,7 +26,30 @@
        <label for="Resultado">Resultado</label><br>
        <input type="number" id="Resultado" name="Resultado"><br>
 
-       <script>
+    <script>
+        function sumarnumeros(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var resultado;
+            if(a ==""){
+                a = 0;
+            }
+            else{
+                a = parseInt(a);
+            }
+            if (b ==""){
+                b = 0;
+            }
+            else{
+                b = parseInt(b);
+            }
+            resultado = a + b;
+            document.getElementById("resultado").value = resultado
 
+        }
+    </script>
+
+    
+</form>
 </body>
 </html>
